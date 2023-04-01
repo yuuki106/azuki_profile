@@ -1,0 +1,364 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    float: none;
+	position: static;
+    list-style: none;
+}
+
+body {
+    -webkit-text-size-adjust: 100%;
+    width: 100%;
+    min-width: 1440px;
+    }
+
+.phoneVer{
+    display: none;
+}
+
+/*--------------------------------------------------*/
+header{
+    background-color: black;
+    height: 80px;
+    
+}
+.header-left img{
+    float: left;
+    margin-top: 6px;
+    margin-left: 20px;
+}
+.header-left h3{
+    color: white;
+    float: left;
+    padding-top: 28px;
+    padding-left: 20px;
+}
+
+.openbtn{
+    display: none;
+}
+
+/*==================================================
+　5-2-8 3本線が横方向に回転して×に
+===================================*/
+
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+.openbtn{
+	/*ボタン内側の基点となるためrelativeを指定。
+追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+	position: relative;
+    left: 332px;
+    width: 50px;
+    height:50px;
+	border-radius: 5px;
+}
+
+/*ボタン内側*/
+.openbtn .openbtn-area{
+    transition: all .1s;/*アニメーションの設定*/
+	width:50px;
+	height:50px;
+}
+
+.openbtn span{
+    display: inline-block;
+    transition: all 0.5s;
+    position: absolute;
+    left: 4px;
+    height: 4px;
+    border-radius: 2px;
+	background: #fff;
+  	width: 70%;
+  }
+
+.openbtn span:nth-of-type(1) {
+	top:27px;
+}
+
+.openbtn span:nth-of-type(2) {
+	top:39px;
+}
+
+.openbtn span:nth-of-type(3) {
+	top:51px;
+}
+
+/*activeクラスが付与されると .openbtn-areaが360度回転し、その中の線が回転して×に*/
+
+
+.openbtn.active span:nth-of-type(1) {
+    top: 31px;
+    left: 4px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 70%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3){
+    top: 43px;
+    left: 4px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 70%;
+}
+
+.iphone-top{
+    display: none;
+}
+
+.swich-wrapper{
+    background-color: grey;
+    text-align: center;
+    width: 1440px;
+    border-bottom: 10px solid black;
+   
+}
+.swich-wrapper a{
+    padding: 20px 75px;
+    background-color: white;
+    display: inline-block;
+    color: black;
+    opacity: 0.6;
+    font-size: 20px;
+    transition: 0.3s;
+    font-family: "Arial Black";   
+}
+
+.swich-wrapper a:hover{
+    opacity: 1;
+}
+
+
+.profile-wrapper::after {
+    content:"";
+    display:block;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:-1;
+    width:100%;
+    height:100%;
+    background-image:url(/img/az_logo.png);
+    background-size:180px;
+}
+
+.profile{
+    background-color: rgba(0, 0, 0, 0.761);
+    width: 1300px;
+    margin: auto;
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+}
+.profile h1{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-family: "rounded-l-mgenplus-1c-black";
+    letter-spacing: 6px;
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+
+.profiles{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+.profiles img{
+    border-radius: 10px;
+    border: 5px solid rgb(255, 255, 255);
+}
+
+.profile-text{
+    color: white;
+    padding-left: 30px;
+}
+.profile-text p{
+    padding-bottom: 2px;
+    font-size: 20px;
+}
+
+
+.favorite-food{
+    background-color: rgba(255, 255, 255, 0.761);
+    width: 1300px;
+    margin: auto;
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+    height: 100%;
+    padding-bottom: 20px;
+}
+
+
+.favorite-food h1{
+    color: black;
+    text-align: center;
+    font-size: 50px;
+    font-family: "rounded-l-mgenplus-1c-black";
+    letter-spacing: 6px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.favorite-food h2{
+    display: none;
+}
+.favorite-food h3{
+    display:none;
+}
+
+.favorite-food-ranking{
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+}
+.favorite-food-ranking a{
+    color: black;
+    text-decoration:none;
+    font-size: 20px;
+    opacity: 1;
+    font-weight: bold;
+}
+.favorite-food-ranking a:hover{
+    opacity: 0.7;
+}
+.favorite-food-ranking p{
+    text-align: center;
+}
+.first{
+    display: flex;
+    align-items: flex-start;
+    padding-right: 30px;
+}
+.second{
+    display: flex;
+    align-items: flex-start;
+    padding-right: 30px;
+}
+.third{
+    display: flex;
+    align-items: flex-start;
+    padding-right: 30px;
+}
+
+.snack{
+    padding-bottom: 48px;
+}
+.snack2{
+    display: none;
+}
+
+
+
+
+
+.house1{
+    background-color: rgba(0, 0, 0, 0.761);
+    width: 1300px;
+    margin: auto;
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+    height: 100%;
+    border-bottom: 1px dotted white;
+    
+}
+.house1 h1{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-family: "rounded-l-mgenplus-1c-black";
+    letter-spacing: 6px;
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+.house1-text{
+    display: flex;
+    justify-content: center;
+}
+.house1-text img{
+    margin-left: 20px;
+    border-radius: 10px;
+    border: 5px solid rgb(255, 255, 255);
+}
+.house1-text2{
+    color: white;
+    text-align: center;
+    padding-left: 50px;
+    padding-top: 20px;
+}
+.house1-text2 h2{
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+.iphone-only{
+    display: none;
+}
+.house1-text2 h3{
+    font-size: 25px;
+}
+.house1-text3 p{
+    font-size: 20px;
+    color: white;
+    padding:30px 40px;
+    text-align: center;
+    
+}
+
+
+.house2{
+    background-color: rgba(0, 0, 0, 0.761);
+    width: 1300px;
+    margin: auto;
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+    height: 100%;
+}
+
+.house2-text1{
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+.house2-text1 img{
+    margin-left: 20px;
+    border-radius: 10px;
+    border: 5px solid rgb(255, 255, 255);
+}
+.house2-text2 {
+    color: white;
+    text-align: center;
+    padding-left: 50px;
+    padding-top: 20px;
+}
+.house2-text2 h2{
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+.house2-text2 h3{
+    font-size: 25px;
+}
+
+.house2-text3 p{
+    font-size: 20px;
+    color: white;
+    padding:30px 40px;
+    text-align: center;
+}
+
+.iphone-swich{
+    display: none;
+}
+
+footer{
+    height: 80px;
+}
+
+.fotter-logo p{
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+}
