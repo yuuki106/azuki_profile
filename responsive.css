@@ -1,0 +1,287 @@
+@media screen and (max-width:480px) {
+
+    .profile-wrapper::after{
+        background-size: 100%;
+        background-image: url(/img/pr_back.jpg);
+    }
+    
+    .pcVer{
+        display: none;
+    }
+    .phoneVer{
+        display: block;
+    }
+    body{
+        min-width: 0;
+    }
+
+
+    /*-------------------------------------------*/
+
+    header{
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        width: 100%;
+    }
+    
+    .header-left img{
+        margin-left: 5px;
+    }
+    .header-left h3{
+        font-size: 19px;
+        padding-left: 8px;
+    }
+    .openbtn{
+        display: block;
+    }
+    /*-------------------------------------------*/
+    .menu-wrapper{
+        background-color: rgba(0, 0, 0, 0.67);
+        padding-top: 30px;
+    }
+    .menu-inner{
+        display: none;
+    }
+
+    .menu-inner li{
+        text-align: center;
+        border-top: 1px solid white;
+        padding: 20px 0;
+        width: 100%;
+        margin: auto;
+    }
+    .menu-wrapper a{
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+        font-size: 25px;
+    }
+
+    /*---------------------------------------------*/
+
+    .swich-wrapper{
+        display: none;
+    }
+
+
+    .profile-wrapper{
+        border-top: none;
+        display: block;
+        border-top: 3px solid white;
+        margin-top: 80px;
+    }
+    .profile{
+        width: 100%;
+        border-left: none;
+        border-right: none;
+    }
+    .profile h1{
+        padding-bottom:0;
+        padding-top: 20px;
+    }
+    .profiles{
+        text-align: center;
+        padding-top:20px;
+    }
+    .profiles img{
+        width: auto;
+        height: 180px;
+        margin-left: 15px;
+        margin-right: 5px;
+    }
+    .profile-text{
+        text-align: left;
+        padding-left: 0;
+        width: 210px;
+        padding-top: 5px;
+    }
+    .profile-text p{
+        padding-bottom: 3px;
+        font-size: 11px;
+        font-weight: bold;
+    }
+
+
+
+    
+
+    .favorite-food{
+        width: 100%;
+        border-left: none;
+        border-right: none;
+    }
+    .favorite-food h1{
+        display: none;
+    }
+
+    .favorite-food h2{
+        display: block;
+        text-align: center;
+        font-size: 50px;
+        font-family: "rounded-l-mgenplus-1c-black";
+    }
+    .favorite-food h3{
+        display: block;
+        text-align: center;
+    }
+
+    
+
+    .favorite-food-ranking{
+        justify-content: left;
+    }
+
+    .favorite-food-ranking a{
+        opacity: 1;
+    }
+    .favorite-food-ranking p{
+        line-height: 10px;
+        font-size: 8px;
+        padding-top: 10px;
+    }
+    .first{
+        display: block;
+        padding-right: 0;
+        text-align: center;
+    }
+    .first a img{
+        width: 103px;
+        height: 196px;
+    }
+    .gold{
+        width:56px;
+        height: 60px;
+    }
+    .second{
+        display: block;
+        padding-right: 10px;
+        text-align: center;
+    }
+    .second a img{
+        width:92px;
+        height: 175px;
+    }
+    .silver{
+        width:47px;
+        height: 50px;
+    }
+    
+    .third{
+        display: block;
+        padding-right: 10px;
+        text-align: center;
+    }
+    .third a img{
+        width:78px;
+        height:156px;
+    }
+    .copper{
+        width:37px;
+        height: 37px;
+    }
+
+
+    .snack{
+        display: none;
+    }
+    .snack2{
+        display: block;
+        text-align: left;
+    }
+
+    .house1{
+        border-left: none;
+        border-right: none;
+        width: 100%;
+        border-bottom: 3px dotted white;
+    }
+    .house1 h1{
+        width: 100%;
+        padding:20px 0;
+        margin-bottom: 20px;
+    }
+    .house1-text{
+        display: block;
+        text-align: center;
+    }
+    
+    .house-title{
+        color: white;
+        font-size: 35px;
+        padding-top: 10px;
+        font-family: "azuki_font";
+    }
+    
+    .house1-text img{
+        margin-left: 0;
+        margin-top:20px;
+        width: 40%;
+        height: auto;
+        border: 2px solid white;
+    }
+
+    .house1-text2{
+        padding-left: 0;
+    }
+    .house1-text2 h3{
+        font-size: 20px;
+    }
+
+    .house1-text3 p{
+        text-align: center;
+        padding: 20px 10px;
+        font-size: 12px;
+    }
+    br{
+        display: block;
+        content:"";
+        height: 10px;
+    }
+
+    .house2{
+        border-left:none;
+        border-right: none;
+        width: 100%;
+    }
+    .house2-text1{
+        display: block;
+        text-align: center;
+        padding-top: 20px;
+    }
+    .house2-text1 img{
+        width: 40%;
+        height: auto;
+        border: 2px solid white;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .house2-text2{
+        padding-left:0;
+    }
+    .house2-text2 h3{
+        font-size: 20px;
+    }
+    .house2-text3 p{
+        padding: 20px 10px;
+        font-size: 12px;
+    }
+
+    .iphone-swich{
+        display: block;
+        background-color: white;
+    }
+    .iphone-switchlist{
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 0;
+        border: 3px solid black;
+    }
+    
+    .iphone-switchlist li{
+        width: 33.33%;
+        height: 72px;
+        border: 1px solid black;
+        list-style: none;
+    }
+}
