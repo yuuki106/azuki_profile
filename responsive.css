@@ -2,7 +2,7 @@
 
     .profile-wrapper::after{
         background-size: 100%;
-        background-image: url(https://github.com/yuuki106/azuki_profile/blob/main/pr_back.jpg?raw=true);
+        background-image: url(/img/pr_back.jpg);
     }
     
     .pcVer{
@@ -22,23 +22,27 @@
         position: fixed;
         top: 0;
         z-index: 10;
-        width: 100vw;
+        width: 100%;
+        text-align: center;
     }
     
     .header-left img{
-        margin-left: 5px;
+        margin-left: 0;
     }
-    .header-left h3{
-        font-size: 19px;
-        padding-left: 8px;
+    .header-center h3{
+        font-size: 20px;
+        width: 280px;
+        margin: auto;
+        padding-left: 0;
     }
-    .openbtn{
+    .header-right{
         display: block;
+        float: right;
+        width: 100px;
     }
     /*-------------------------------------------*/
     .menu-wrapper{
         background-color: rgba(0, 0, 0, 0.67);
-        padding-top: 30px;
     }
     .menu-inner{
         display: none;
@@ -69,7 +73,7 @@
         border-top: none;
         display: block;
         border-top: 3px solid white;
-        margin-top: 80px;
+        margin-top: 70px;
     }
     .profile{
         width: 100%;
