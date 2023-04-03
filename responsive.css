@@ -2,7 +2,7 @@
 
     .profile-wrapper::after{
         background-size: 100%;
-        background-image: url(/img/pr_back.jpg);
+        background-image: url(https://github.com/yuuki106/azuki_profile/blob/main/pr_back.jpg?raw=true);
     }
     
     .pcVer{
