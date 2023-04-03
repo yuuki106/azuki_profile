@@ -1,291 +1,367 @@
-@media screen and (max-width:480px) {
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    float: none;
+	position: static;
+    list-style: none;
+}
 
-    .profile-wrapper::after{
-        background-size: 100%;
-        background-image: url(/img/pr_back.jpg);
-    }
+body {
+    -webkit-text-size-adjust: 100%;
+    width: 100%;
+    min-width: 1440px;
+}
+
+.phoneVer{
+    display: none;
+}
+
+/*--------------------------------------------------*/
+header{
+    background-color: black;
+    height: 80px;
     
-    .pcVer{
-        display: none;
-    }
-    .phoneVer{
-        display: block;
-    }
-    body{
-        min-width: 0;
-    }
+}
+.header-left{
+    float: left;
+}
+
+.header-left img{
+    margin-top: 6px;
+    margin-left: 20px;
+    display: inline-block;
+}
+.header-center h3{
+    color: white;
+    font-size: 20px;
+    line-height: 80px;
+    padding-left: 100px;
+    width: 380px;
+}
+
+.header-right{
+    display: none;
+}
 
 
-    /*-------------------------------------------*/
 
-    header{
-        position: fixed;
-        top: 0;
-        z-index: 10;
-        width: 100%;
-        text-align: center;
-    }
+/*==================================================
+　5-2-8 3本線が横方向に回転して×に
+===================================*/
+
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+.openbtn{
+	/*ボタン内側の基点となるためrelativeを指定。
+ 追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+	position: fixed;
+    top: 0;
+    right: 0;
+    width: 50px;
+	border-radius: 5px;
+
+}
+
+/*ボタン内側*/
+
+
+.openbtn span{
+    display: inline-block;
+    transition: all 0.5s;
+    position: absolute;
+    left: 5px;
+    height: 4px;
+    border-radius: 3px;
+	background: #fff;
+  	width: 70%;
+}
+
+.openbtn span:nth-of-type(1) {
+	top:25px;
+}
+
+.openbtn span:nth-of-type(2) {
+	top:37px;
+}
+
+.openbtn span:nth-of-type(3) {
+	top:49px;
+}
+
+/*activeクラスが付与されると .openbtn-areaが360度回転し、その中の線が回転して×に*/
+
+
+.openbtn.active span:nth-of-type(1) {
+    top: 31px;
+    left: 4px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 70%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3){
+    top: 43px;
+    left: 4px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 70%;
+}
+
+.iphone-top{
+    display: none;
+}
+
+.swich-wrapper{
+    background-color: grey;
+    text-align: center;
+    border-bottom: 10px solid black;
+   
+}
+.swich-wrapper a{
+    padding: 20px 75px;
+    background-color: white;
+    display: inline-block;
+    color: black;
+    opacity: 0.6;
+    font-size: 20px;
+    transition: 0.3s;
+    font-family: "Arial Black";   
+}
+
+.swich-wrapper a:hover{
+    opacity: 1;
+}
+
+
+.profile-wrapper::after {
+    content:"";
+    display:block;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:-1;
+    width:100%;
+    height:100%;
+    background-image:url(/img/az_logo.png);
+    background-size:180px;
+}
+
+.profile{
+    background-color: rgba(0, 0, 0, 0.761);
+    width: 1300px;
+    margin: auto;
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+}
+.profile h1{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-family: "rounded-l-mgenplus-1c-black";
+    letter-spacing: 6px;
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+
+.profiles{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+.profiles img{
+    border-radius: 10px;
+    border: 5px solid rgb(255, 255, 255);
+}
+
+.profile-text{
+    color: white;
+    padding-left: 30px;
+}
+.profile-text p{
+    padding-bottom: 2px;
+    font-size: 20px;
+}
+
+
+.favorite-food{
+    background-color: rgba(255, 255, 255, 0.761);
+    width: 1300px;
+    margin: auto;
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+    height: 100%;
+    padding-bottom: 20px;
+}
+
+
+.favorite-food h1{
+    color: black;
+    text-align: center;
+    font-size: 50px;
+    font-family: "rounded-l-mgenplus-1c-black";
+    letter-spacing: 6px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.favorite-food h2{
+    display: none;
+}
+.favorite-food h3{
+    display:none;
+}
+
+.favorite-food-ranking{
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+}
+.favorite-food-ranking a{
+    color: black;
+    text-decoration:none;
+    font-size: 20px;
+    opacity: 1;
+    font-weight: bold;
+}
+.favorite-food-ranking a:hover{
+    opacity: 0.7;
+}
+.favorite-food-ranking p{
+    text-align: center;
+}
+.first{
+    display: flex;
+    align-items: flex-start;
+    padding-right: 30px;
+}
+.second{
+    display: flex;
+    align-items: flex-start;
+    padding-right: 30px;
+}
+.third{
+    display: flex;
+    align-items: flex-start;
+    padding-right: 30px;
+}
+
+.snack{
+    padding-bottom: 48px;
+}
+.snack2{
+    display: none;
+}
+
+
+
+
+
+.house1{
+    background-color: rgba(0, 0, 0, 0.761);
+    width: 1300px;
+    margin: auto;
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+    height: 100%;
+    border-bottom: 1px dotted white;
     
-    .header-left img{
-        margin-left: 0;
-    }
-    .header-center h3{
-        font-size: 20px;
-        width: 280px;
-        margin: auto;
-        padding-left: 0;
-    }
-    .header-right{
-        display: block;
-        float: right;
-        width: 100px;
-    }
-    /*-------------------------------------------*/
-    .menu-wrapper{
-        background-color: rgba(0, 0, 0, 0.67);
-    }
-    .menu-inner{
-        display: none;
-    }
-
-    .menu-inner li{
-        text-align: center;
-        border-top: 1px solid white;
-        padding: 20px 0;
-        width: 100%;
-        margin: auto;
-    }
-    .menu-wrapper a{
-        display: inline-block;
-        color: white;
-        text-decoration: none;
-        font-size: 25px;
-    }
-
-    /*---------------------------------------------*/
-
-    .swich-wrapper{
-        display: none;
-    }
-
-
-    .profile-wrapper{
-        border-top: none;
-        display: block;
-        border-top: 3px solid white;
-        margin-top: 70px;
-    }
-    .profile{
-        width: 100%;
-        border-left: none;
-        border-right: none;
-    }
-    .profile h1{
-        padding-bottom:0;
-        padding-top: 20px;
-    }
-    .profiles{
-        text-align: center;
-        padding-top:20px;
-    }
-    .profiles img{
-        width: auto;
-        height: 180px;
-        margin-left: 15px;
-        margin-right: 5px;
-    }
-    .profile-text{
-        text-align: left;
-        padding-left: 0;
-        width: 210px;
-        padding-top: 5px;
-    }
-    .profile-text p{
-        padding-bottom: 3px;
-        font-size: 11px;
-        font-weight: bold;
-    }
-
-
-
+}
+.house1 h1{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-family: "rounded-l-mgenplus-1c-black";
+    letter-spacing: 6px;
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+.house1-text{
+    display: flex;
+    justify-content: center;
+}
+.house1-text img{
+    margin-left: 20px;
+    border-radius: 10px;
+    border: 5px solid rgb(255, 255, 255);
+}
+.house1-text2{
+    color: white;
+    text-align: center;
+    padding-left: 50px;
+    padding-top: 20px;
+}
+.house1-text2 h2{
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+.iphone-only{
+    display: none;
+}
+.house1-text2 h3{
+    font-size: 25px;
+}
+.house1-text3 p{
+    font-size: 20px;
+    color: white;
+    padding:30px 40px;
+    text-align: center;
     
-
-    .favorite-food{
-        width: 100%;
-        border-left: none;
-        border-right: none;
-    }
-    .favorite-food h1{
-        display: none;
-    }
-
-    .favorite-food h2{
-        display: block;
-        text-align: center;
-        font-size: 50px;
-        font-family: "rounded-l-mgenplus-1c-black";
-    }
-    .favorite-food h3{
-        display: block;
-        text-align: center;
-    }
-
-    
-
-    .favorite-food-ranking{
-        justify-content: left;
-    }
-
-    .favorite-food-ranking a{
-        opacity: 1;
-    }
-    .favorite-food-ranking p{
-        line-height: 10px;
-        font-size: 8px;
-        padding-top: 10px;
-    }
-    .first{
-        display: block;
-        padding-right: 0;
-        text-align: center;
-    }
-    .first a img{
-        width: 103px;
-        height: 196px;
-    }
-    .gold{
-        width:56px;
-        height: 60px;
-    }
-    .second{
-        display: block;
-        padding-right: 10px;
-        text-align: center;
-    }
-    .second a img{
-        width:92px;
-        height: 175px;
-    }
-    .silver{
-        width:47px;
-        height: 50px;
-    }
-    
-    .third{
-        display: block;
-        padding-right: 10px;
-        text-align: center;
-    }
-    .third a img{
-        width:78px;
-        height:156px;
-    }
-    .copper{
-        width:37px;
-        height: 37px;
-    }
+}
 
 
-    .snack{
-        display: none;
-    }
-    .snack2{
-        display: block;
-        text-align: left;
-    }
+.house2{
+    background-color: rgba(0, 0, 0, 0.761);
+    width: 1300px;
+    margin: auto;
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+    height: 100%;
+}
 
-    .house1{
-        border-left: none;
-        border-right: none;
-        width: 100%;
-        border-bottom: 3px dotted white;
-    }
-    .house1 h1{
-        width: 100%;
-        padding:20px 0;
-        margin-bottom: 20px;
-    }
-    .house1-text{
-        display: block;
-        text-align: center;
-    }
-    
-    .house-title{
-        color: white;
-        font-size: 35px;
-        padding-top: 10px;
-        font-family: "azuki_font";
-    }
-    
-    .house1-text img{
-        margin-left: 0;
-        margin-top:20px;
-        width: 40%;
-        height: auto;
-        border: 2px solid white;
-    }
+.house2-text1{
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+}
 
-    .house1-text2{
-        padding-left: 0;
-    }
-    .house1-text2 h3{
-        font-size: 20px;
-    }
+.house2-text1 img{
+    margin-left: 20px;
+    border-radius: 10px;
+    border: 5px solid rgb(255, 255, 255);
+}
+.house2-text2 {
+    color: white;
+    text-align: center;
+    padding-left: 50px;
+    padding-top: 20px;
+}
+.house2-text2 h2{
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+.house2-text2 h3{
+    font-size: 25px;
+}
 
-    .house1-text3 p{
-        text-align: center;
-        padding: 20px 10px;
-        font-size: 12px;
-    }
-    br{
-        display: block;
-        content:"";
-        height: 10px;
-    }
+.house2-text3 p{
+    font-size: 20px;
+    color: white;
+    padding:30px 40px;
+    text-align: center;
+}
 
-    .house2{
-        border-left:none;
-        border-right: none;
-        width: 100%;
-    }
-    .house2-text1{
-        display: block;
-        text-align: center;
-        padding-top: 20px;
-    }
-    .house2-text1 img{
-        width: 40%;
-        height: auto;
-        border: 2px solid white;
-        margin-left: 0;
-        margin-top: 20px;
-    }
-    .house2-text2{
-        padding-left:0;
-    }
-    .house2-text2 h3{
-        font-size: 20px;
-    }
-    .house2-text3 p{
-        padding: 20px 10px;
-        font-size: 12px;
-    }
+.iphone-swich{
+    display: none;
+}
 
-    .iphone-swich{
-        display: block;
-        background-color: white;
-    }
-    .iphone-switchlist{
-        display: flex;
-        flex-wrap: wrap;
-        padding-left: 0;
-        border: 3px solid black;
-    }
-    
-    .iphone-switchlist li{
-        width: 33.33%;
-        height: 72px;
-        border: 1px solid black;
-        list-style: none;
-    }
+footer{
+    height: 80px;
+}
+
+.fotter-logo p{
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 80px;
 }
