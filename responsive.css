@@ -273,18 +273,22 @@
     }
 
     .phone-menu{
-        border: 1px solid black;
-    }
-    .phone-menu ul{
-        display: flex;
+        border: 2px solid black;
     }
 
-    .a-menu li{
+    .a-menu{
+        display: flex;
+        
+    }
+    .a-menu a{
         height: 75px;
         width: 33.33%;
         border: 1px solid black;
     }
-    .b-menu li{
+    .b-menu {
+        display: flex;
+    }
+    .b-menu a{
         height: 75px;
         width: 33.33%;
         border: 1px solid black;
@@ -313,4 +317,3 @@
         background-image: url(https://github.com/yuuki106/azuki_schedule/blob/main/Goods_icon.jpg?raw=true);
         background-size: contain;
     }
-}
